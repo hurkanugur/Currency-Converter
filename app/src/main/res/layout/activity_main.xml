@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    android:textColor="@color/white"
+    tools:context=".MainActivity">
+
+    <NumberPicker
+        android:id="@+id/FromCurrency"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:background="#424242"
+        android:contextClickable="false"
+        app:layout_constraintEnd_toStartOf="@+id/ToCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/ToCurrency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:background="#424242"
+        android:contextClickable="false"
+        android:textColorPrimary="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FromCurrency"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="#303030"
+        android:gravity="center"
+        android:hint="A M O U N T"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/FromCurrency"
+        app:layout_constraintStart_toStartOf="@+id/FromCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/FromCurrency" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:onClick="HukoCurrencyConverterButtonClickEvent"
+        android:text="Convert"
+        android:textColor="@color/black"
+        app:backgroundTint="#303030"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="#303030"
+        android:gravity="center"
+        android:hint="R E S U L T"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ToCurrency"
+        app:layout_constraintStart_toStartOf="@+id/ToCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/ToCurrency" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#303030"
+        android:gravity="center"
+        android:text="F R O M"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/FromCurrency"
+        app:layout_constraintEnd_toEndOf="@+id/FromCurrency"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/FromCurrency"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#303030"
+        android:gravity="center"
+        android:text="T O"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ToCurrency"
+        app:layout_constraintEnd_toEndOf="@+id/ToCurrency"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ToCurrency"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
